@@ -1,0 +1,172 @@
+footer {
+    .footer{
+        &__top {
+            margin-top: 60px;
+            display:flex;
+            font-family: PR;
+            font-size: 14px;
+            // font-weight: 600;
+            padding-bottom:25px;
+            .line {
+                width: 100%;
+                height: 1px;
+                padding-bottom: 60px;
+                border-top: 1px solid #000;
+            }
+            &-info{
+                // margin-left:20px;
+                line-height: 2;
+                p{
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    span{
+                        padding-left:35px;
+                    }
+                }
+                .tel {
+                    margin-top:30px;
+                }
+            }
+            &-des {
+                text-transform: uppercase;
+                line-height: 2;
+                letter-spacing: 1px;
+            }
+        }
+        &__bottom {
+            padding-top:25px;
+            background-color: $yellow-bg-cl;
+            height: 500px;
+            &-address {
+                // margin-left:20px;
+                text-transform: uppercase;
+                line-height: 2;
+                font-family: PR;
+                font-size:14px;
+            }
+            &-form {
+                .mess {
+                    display:none;
+                }
+                .field {
+                    margin-bottom: 20px;
+                    label {
+                        display:block;
+                        font-size:14px;
+                        font-family: PR;
+                        line-height: 33px;
+                    }
+                    input {
+                        width:100%;
+                        background:transparent;
+                        border:none;
+                        border-bottom:1px solid #171717;
+                        outline:none;
+                        line-height: 18px;
+                        color:#fff;
+                    }
+                    textarea {
+                        width: 100%;
+                        height: 80px;
+                        overflow: hidden;
+                        border: 0;
+                        outline: 0;
+                        padding: 0;
+                        top: -3px;
+                        position: relative;
+                        line-height: 32px;
+                        background: url(/img/bg-contact.png) center no-repeat;
+                        color:$text-cl;
+                    }
+                }
+                .btn-contact {
+                    float: right;
+                    width: 50px;
+                    text-align: center;
+                    background: $black-cl;
+                    border: 0;
+                    cursor: pointer;
+                    margin-top:20px ;
+                    // margin-top: 10px;
+                    @include transition($t);
+                    span{
+                        display:block;
+                        padding:6px 10px;
+                        font-weight: 600;
+                        color:#fff;
+                        font-size:10px;
+                        line-height: normal;
+                    }
+                    &:hover {
+                        background:#fff;
+                        span{
+                            color:$black-cl;
+                        }
+                    }
+                }
+            }
+            .copyright {
+                text-align: center;
+                margin-top: 70px;
+                img {
+                    transform:rotate(-90deg);
+                    position: relative;
+                    // display: block;
+                    padding: 0 20px;
+                    top:0;
+                    transition: all .3s;
+                    cursor: pointer;
+                    &:hover {
+                        top:-10px;
+                    }
+                }
+                p {
+                    margin-top:20px;
+                }
+            }
+        }
+    }
+}
+@include maxW(767px){
+    footer {
+        .footer__top {
+            padding-bottom: 10px;
+            &-info {
+                text-align: center;
+                .tel {
+                    margin-top:0;
+                }
+            }
+            &-des{
+                display: none;
+            }
+        }
+        .footer__bottom {
+            // min-height: 400px;
+            &.footer__contact {
+                background-color: $yellow-bg-cl;
+            }
+            height: auto;
+            background-color: transparent;
+            text-align: center;
+            padding: 0;
+            &-form {
+                display: none;
+            }
+            &-address{
+                margin-bottom: 20px;
+            }
+            .copyright{
+                margin-top: 30px;
+                padding: 35px;
+                margin: 0 -15px;
+                &.copyright-contact {
+                    height: 300px;
+                }
+            }
+            &-contact {
+                display:none;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.project-details {
+    // margin-top:60px;
+    &-subtitle {
+        padding-top:50px;
+    }
+    &-number{
+        font-family: PNL;
+        font-size:14px;
+        color:$text-cl;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    &-img {
+        margin: 20px 0;
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+    &-title {
+        font-size:14px;
+        font-family: PNL;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+    &-des {
+        font-size: 12.5px;
+        font-family: PR;
+        line-height: 22px;
+        span {
+            font-style: italic;
+            text-transform: capitalize;
+        }
+    }
+}
+@include maxW(767px){
+    .project-details {
+        .back-to-all {
+            i {
+                margin-left:5px;
+            }
+        }
+        &-title {
+            margin-bottom: 0;
+        }
+        &-des {
+            padding-top:20px;
+            padding-bottom:40px;
+        }
+    }
+}

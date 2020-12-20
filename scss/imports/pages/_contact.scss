@@ -1,0 +1,90 @@
+header {
+    &.header-contact {
+        margin-bottom: 0;
+    }
+}
+.contact {
+    background-repeat: no-repeat;
+    background-position: center;
+    &-logo {
+       margin:15px auto 30px auto;
+    }
+    &-des {
+        font-size: 14px;
+        font-family: PR;
+        text-transform: uppercase;
+        color: #f1f1f1;
+        line-height: 30px;
+        padding:0 15px;
+        cursor: pointer;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            width: calc(100% - 321px);
+            height: 1px;
+            background-color: currentColor;
+            -webkit-transform: scaleX(0);
+            -o-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transform-origin: left;
+            -o-transform-origin: left;
+            /* transform-origin: left; */
+            -webkit-transition: -webkit-transform .5s ease;
+            transition: -webkit-transform .5s ease;
+            -o-transition: -o-transform .5s ease;
+            transition: transform .5s ease;
+            transition: transform .5s ease,-webkit-transform .5s ease,-o-transform .5s ease;
+        }
+        &:hover {
+            &::after{
+                -webkit-transform: scaleX(1);
+                -o-transform: scaleX(1);
+                transform: scaleX(1);
+            }
+        }
+    }
+    &-address {
+        text-align: right;
+        font-size: 14px;
+        font-family: PR;
+        text-transform: uppercase;
+        color: #f1f1f1;
+        line-height: 30px;
+        padding:0 15px;
+        cursor: pointer;
+    }
+    &-phone{
+        display:flex;
+        .tel {
+            padding-right: 35px;
+        }
+    }
+    &-arrow{
+        margin: 40px auto 15px auto;
+        animation: down 1s ease-in-out infinite;
+    }
+}
+@include maxW(767px) {
+    .contact {
+        height:430px;
+        &-logo {
+            display:none;
+        }
+        &-address {
+            text-align: center;
+            margin-top: 100px;
+        }
+        &-des {
+            text-align: center;
+        }
+        &-phone {
+            justify-content: center;
+        }
+        &-arrow {
+            display:none;
+        }
+    }
+}

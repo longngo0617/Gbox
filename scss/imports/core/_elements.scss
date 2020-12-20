@@ -1,0 +1,139 @@
+img {
+    display:block;
+    margin:auto;
+    max-width: 100%;
+}
+.back-to-all {
+    a {
+        float:right;
+        text-decoration:none;
+        color:$text-cl;
+        font-size:14px;
+        i {
+            display: inline-block;
+            margin-left: 30px;
+            position: relative;
+            vertical-align: middle;
+            transform: rotate(90deg);
+            transition:all .4s;
+            left:0;
+            top:-2px;
+            @include maxW(767px) {
+                margin-left:15px;
+            }
+        }
+        &:hover {
+            i{
+                left:-14px;
+            }
+        }
+    }
+}
+.studio-item-name {
+    background:$yellow-bg-cl;
+    text-align: center;
+    height: 100%;
+    p{
+        font-size:12px;
+        text-transform: uppercase;
+        color:$text-cl;
+        padding:20px;
+    }
+    span {
+        font-size:60px;
+        font-family: DIN;
+        display: block;
+    }
+    &.item-ml {
+        margin-left: 25px;
+        max-width: 135px;
+    }
+}
+.btn {
+    display:flex;
+    justify-content: center;
+    position: relative;
+    &::before {
+        content: "";
+        width: 1px;
+        height: 14px;
+        background: #000;
+        top: 50%;
+        left: 56%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+    }
+    &.mr-bt {
+        margin-bottom: 30px;
+    }
+    span {
+        padding:0 20px;
+    }
+    &-prev,&-next {
+        align-items: center;
+        display:flex;
+        cursor: pointer;
+    }
+    .arrow-prev {
+        transform:rotate(90deg);
+        position: relative;
+        left:0;
+        transition: .3s ease;
+    }
+    .arrow-next {
+        transform:rotate(-90deg);
+        position: relative;
+        left:0;
+        transition: .3s ease;
+    }
+    &-prev:hover {
+        .arrow-prev{
+            left:-5px;
+        }
+    }
+    &-next:hover {
+        .arrow-next{
+            left:5px;
+        }
+    }
+}
+.ml {
+    margin-left:25px;
+}
+.mb {
+    margin-bottom: 30px;
+}
+.mt {
+    margin-top: 50px;
+}
+.btn-logo {
+    // width: 100%;
+    &-text {
+        max-width: 100px;
+        background: $text-title;
+        border-radius: 4px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: background 0.8s ease;
+        span {
+            text-align: center;
+            align-items: center;
+            font-size: 24px;
+            font-family: PXB;
+            color: $yellow-bg-cl;
+            text-transform: uppercase;
+            transition: color 1s cubic-bezier(0.2,0.6,0.35,1);
+        }
+    }
+}
+.arrow-down {
+    display: block;
+    margin:40px auto 20px auto;
+    animation: down 1s ease-in-out infinite;
+}
+.locksroll {
+    position: fixed;
+    overflow: hidden;
+}

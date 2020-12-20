@@ -1,0 +1,96 @@
+header {
+    &.header-work {
+        margin-bottom: 0;
+    }
+}
+.work {
+    &-more {
+        text-align: center;
+        // padding-bottom: 100px;
+        // border-bottom:1px solid $black-cl;
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size:12px;
+            font-family: PSB;
+            color:$text-cl;
+            display: block;
+            margin-bottom: 20px;
+            padding:15px 0;
+            margin: auto;
+            max-width: 100px;
+            img{
+                position: relative;
+                /* top: -20px; */
+                display: block;
+                margin: auto;
+                transition: all 0.4s;
+                margin-top: 20px;
+                top:0;
+            }
+            &:hover {
+                img {
+                    top:14px;
+                }
+            }
+        }
+    }
+    &-wrap{
+        display: flex;
+        float: right;
+        .work-btn{
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 27px;
+            font-family: PXB;
+            color: $yellow-bg-cl;
+            background: $header-bg-cl;
+            max-width: 100px;
+            padding: 25px 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .work-instruct{
+            font-size: 14px;
+            font-family: PR;
+            color: #000;
+            line-height: 20px;
+            max-width: 100px;
+            text-align: right;
+            margin-right: 20px;
+        }
+    }
+}
+@include maxW(991px) {
+    .work {
+        margin-top:20px;
+    }
+}
+@include maxW(767px) {
+    .work {
+        .book-work {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+        .project {
+            margin-top:0;
+        }
+        .project__tab {
+            display: block;
+            text-align: center;
+            padding:25px 0;
+        }
+        &-wrap {
+            float:none;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-btn {
+            margin-top:10px;
+            margin-bottom: 30px;
+        }
+        &-instruct {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,212 @@
+header {
+    &.header-rental {
+        margin-bottom: 0;
+    }
+}
+.rental {
+    &-left {
+        background:$header-bg-cl;
+        height:730px;
+        &-title {
+            font-size: 32px;
+            font-family: PXB;
+            text-transform: capitalize;
+            color:$white-cl;
+            line-height: 30px;
+            margin-bottom: 20px;
+            line-height: 30px;
+        }
+    } 
+    &-des {
+        font-size: 12px;
+        font-family: PR;
+        color:$white-cl;
+    }
+    &-des:not(:last-child) {
+        padding:20px 0;
+        text-transform: uppercase;
+    }
+    &-right {
+        .form-title {
+            font-size: 28px;
+            font-family: PXB;
+            line-height: 30px;
+            color:$text-title-form;
+        }
+        .form-details {
+            .field {
+                margin-bottom: 25px;
+                label {
+                    font-size: 12px;
+                    font-family: PR;
+                    line-height: 33px;
+                    display: block;
+                }
+                input {
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid #39382f;
+                    outline: none;
+                    line-height: 18px;
+                    color: $text-cl;
+                }
+                .mess {
+                    display:none;
+                    font-size: 14px;
+                    color:red;
+                }
+                p{
+                    font-size: 12px;
+                    font-family: PR;
+                    font-style: italic;
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 90px;
+                    outline: 0;
+                    padding: 0;
+                    border: 1px solid #39382f;
+                    margin-top: 18px;
+                }
+                #lighting {
+                    width: calc(100% - 55px);
+                }
+                span{
+                    font-size: 24px;
+                    font-family: DIN;
+                    padding:10px;
+                    color:#b4b4b4;
+                    background:#000;
+                    border:1px solid #39382f;
+                    display: inline-block;
+                    cursor: pointer;
+                    &.active {
+                        background:$yellow-bg-cl;
+                        color:$text-cl;
+                    }
+                }
+                span:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+        }
+        .booking {
+            width: 100%;
+            &-title {
+                font-size: 12px;
+                font-family: PR;
+                line-height: 33px;
+            }
+            .date {
+                &-input {
+                    position: relative;
+                    input {
+                        outline: 0;
+                        border: 1px solid #39382f;
+                        width: 100%;
+                        height: 40px;
+                        padding-left: 20px;
+                        font-style: italic;
+                        font-size: 12px;
+                        font-family: PR;
+                    }
+                    .calendar {
+                        position: absolute;
+                        top: 6px;
+                        right: 16px;
+                    }
+                }
+            }
+            .arrow-img {
+                height: 100%;
+                display: flex;
+                img {
+                    transform:rotate(-90deg);
+                }
+            }
+        }
+        .box {
+           #box-opinion {
+            border: 1px solid #39382f;
+            padding: 10px 0;
+           }
+        }
+        .submit {
+            margin-top:35px;
+            &-wrap {
+                display:flex;
+                .btn-submit {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $yellow-bg-cl;
+                    background: #525355;
+                    font-family: PXB;
+                    font-size: 20px;
+                    display: block;
+                    padding: 35px 10px;
+                    border-radius: 8px;
+                    margin-right: 20px;
+                }
+                .submit-instruct{
+                    font-size: 12px;
+                    font-family: PR;
+                    line-height: 24px;
+                    max-width: 190px;
+                    span{
+                        font-family: PB;
+                    }
+                }
+            }
+        }
+    }
+}
+@include maxW(991px) {
+    .rental-right{
+        .booking {
+            .arrow-img {
+                padding:10px 0;
+                img {
+                    transform:rotate(0);
+                }
+            }
+        }
+    }
+}
+@include maxW(767px){
+    .rental {
+        margin-top:20px;
+    }
+    .rental-left {
+        background:#fff;
+        height: auto;
+        &-number{
+            margin:0;
+        }
+        &-des {
+            h3 {
+                color:$text-cl;
+            }
+            .rental-des {
+                color:$text-cl;
+            }
+        }
+    }
+    .rental-right {
+        .form-details {
+            .field{
+                #lighting{
+                    width: 100%;
+                }
+            }
+        }
+        .booking {
+            .date-input {
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

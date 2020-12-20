@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+// .home {
+//     margin:8rem 4rem;
+// }
+.container {
+    max-width:980px;
+}
+.introduce {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+    &__welcome {
+        margin:60px auto 30px auto;
+       font-size:14px;
+       font-family: PNL;
+       line-height: 22px;
+       color:$text-cl;
+       letter-spacing: 2px;
+       max-width: 100px;
+    }
+    &__title{
+        font-size: 20px;
+        font-family: PB;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+        color:$text-title;
+        max-width: 224px;
+        margin:auto;
+        white-space: nowrap;
+        background:$yellow-bg-cl;
+        margin-bottom: 30px;
+    }
+    &__des{
+        font-size:12px;
+        line-height: 1.8;
+        padding-bottom: 60px;
+        b{
+            font-weight: 600;
+        }
+    }
+    span{
+        width: 320px;
+        height:1px;
+        background:#171717;
+        display: block;
+        margin:auto
+    }
+}
+.project {
+    margin-top:35px;
+    &__tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        >a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: PSB;
+            font-size: 12px;
+            padding:20px;
+            color:#898989;
+            transition: color .5s ease;
+            &.active {
+                color:$text-cl;
+            }
+            &:hover {
+                color:$text-cl;
+            }
+        }
+    }
+    &__item {
+        text-align: center;
+        font-size:14px;
+        margin-bottom: 60px;
+        &:hover {
+            .project__item--title::before {
+                transform: scaleX(8);
+            }
+        }
+        &-thumbnail{
+            position: relative;
+            overflow: hidden;
+            img {
+                transform:scale(1);
+                transition: 1s ease;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        &--title {
+            margin-top:40px;
+            padding-bottom: 20px;
+            position: relative;
+            a{
+                font-family: PB;
+                text-transform: uppercase;
+                text-decoration: none;
+                color:$text-cl;
+            }
+            &::before {
+                content:"";
+                width: 16px;
+                height:3px;
+                background:$yellow-bg-cl;
+                position: absolute;
+                top:65%;
+                left:48%;
+                // transform:translate(-50%,-50%);
+                transform:scaleX(1);
+                transition: .5s ease-out;
+            }
+        }
+        &--des {
+            font-family: PR;
+            color:$text-cl;
+            line-height: 1.5;
+            span {
+                font-style:italic;
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &__all {
+        text-align: center;
+        // padding-bottom: 100px;
+        // border-bottom:1px solid $black-cl;
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size:12px;
+            font-family: PSB;
+            color:$text-cl;
+            display: block;
+            margin-bottom: 20px;
+            padding:15px 0;
+            margin: auto;
+            max-width: 100px;
+            img{
+                position: relative;
+                /* top: -20px; */
+                display: block;
+                margin: auto;
+                transition: all 0.4s;
+                margin-top: 20px;
+                top:0;
+            }
+            &:hover {
+                img {
+                    top:14px;
+                }
+            }
+        }
+    }
+}
+@include maxW(767px) {
+    .section-introduce {
+        .introduce__welcome {
+            margin:20px auto 20px;
+            padding-top:50px;
+        }
+        .introduce__title{
+            margin-bottom: 0;
+        }
+        .introduce__des{
+            display: none;
+        }
+        span{
+            display: none;
+        }
+    }
+    .section-project {
+        .project__tab {
+            display:none;
+        }
+    }
+}
